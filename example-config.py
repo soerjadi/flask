@@ -4,6 +4,9 @@ import os
 # Statement for enabling the development environment
 DEBUG = True
 
+# Server name for url generation. If port not filed so use the default 5000
+SERVER_NAME = "127.0.0.1"
+
 # Define the application directory
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -27,3 +30,7 @@ CSRF_SESSION_KEY = "secret"
 
 # Secret key for signing cookies
 SECRET_KEY = "secret"
+
+SESSION_COOKIE_NAME = ""
+SESSION_COOKIE_DOMAIN = ""
+SESSION_COOKIE_PATH = ""
