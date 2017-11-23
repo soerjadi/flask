@@ -1,8 +1,19 @@
 # -*- coding: utf-8 -*-
-from app import app
-from flask import render_template_string
+from flask_classy import FlaskView
 
 
-@app.route("/")
-def index():
-    return render_template_string("hello")
+class HomeController(FlaskView):
+    """
+
+    """
+    def __init__(self):
+        return
+
+    def index(self):
+        return "hello"
+
+
+# HomeController.register(app)
+# @app.route("/")
+# def index():
+#     return render_template_string("hello")

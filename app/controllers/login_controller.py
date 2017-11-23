@@ -1,16 +1,24 @@
 # -*- coding: utf-8 -*-
 from flask import request, render_template
-from app import app
+from flask_classy import FlaskView, route
 # Import Login form
 from app.forms.login_form import LoginForm
 
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    form = LoginForm(request.form)
+class LoginController(FlaskView):
+    """
+    Handle login
+    """
+    route_base = "/login"
 
-    if form.validate_on_submit():
+    def __init__(self):
+        return
 
-        print("login")
+    @route("", methods=["GET", "POST"])
+    def index(self):
+        form = LoginForm(request.form)
 
-    return render_template("login.html", form=form)
+        if form.validate_on_submit():
+            print("login")
+
+        return render_template("login.html", form=form)

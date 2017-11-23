@@ -7,8 +7,7 @@ app.config.from_object("config")
 
 db = SQLAlchemy(app)
 
-# import controller into application
-from app.controllers import *
+import router
 
 
 @app.errorhandler(404)
