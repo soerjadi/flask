@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from flask_wtf import Form
-from wtforms import TextField, PasswordField
-from wtforms.validators import Required, Email, EqualTo
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField
+from wtforms.validators import DataRequired, Email
 
 
-class LoginForm(Form):
-    email = TextField("Email Address", [Email(), Required(message = "Forgot your email address?")])
-    password = PasswordField("Password", [Required(message = "Password cannot be empty")])
+class LoginForm(FlaskForm):
+    email = StringField("Email Address", [Email(), DataRequired(message="Forgot your email address?")])
+    password = PasswordField("Password", [DataRequired(message="Password cannot be empty")])
