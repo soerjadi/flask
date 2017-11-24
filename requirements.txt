@@ -1,7 +1,6 @@
 flask
 flask-sqlalchemy
 flask-wtf
-Jinja2
 bcrypt
 flask-classy
 flask-script

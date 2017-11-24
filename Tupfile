@@ -1,0 +1,14 @@
+ROOT_DIR=.
+ASSET_DIR=$(ROOT_DIR)/assets
+ASSET_OUT=$(ASSET_DIR)/out
+APP_ASSET=$(ROOT_DIR)/app/static
+TOOL_DIR=$(ROOT_DIR)/assets/buildtools
+
+: $(ASSET_DIR)/semantic/*.less |> lessc --clean-css="--compatibility=ie8" $(ASSET_DIR)/semantic/semantic.less %o |> $(ASSET_OUT)/css/semantic.css
+: $(ASSET_DIR)/semantic/*.less |> lessc --clean-css="-s1 --compatibility=ie8 --advanced" $(ASSET_DIR)/semantic/semantic.less %o |> $(ASSET_OUT)/css/semantic.min.css
+
+: $(ASSET_OUT)/css/semantic.css |> cp %f %o |> $(APP_ASSET)/css/semantic.css
+: $(ASSET_OUT)/css/semantic.min.css |> cp %f %o |> $(APP_ASSET)/css/semantic.min.css
+
+: $(ASSET_OUT)/js/semantic.js |> cp %f %o |> $(APP_ASSET)/js/semantic.js
+: $(ASSET_OUT)/js/semantic.min.js |> cp %f %o |> $(APP_ASSET)/js/semantic.min.js

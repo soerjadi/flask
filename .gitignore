@@ -6,3 +6,10 @@ __pycache__
 .DS_Store
 config.py
 *.db
+app/static/css/semantic.css
+app/static/css/semantic.min.css
+app/static/js/semantic.js
+app/static/js/semantic.min.js
+assets/out/css/semantic.css
+assets/out/css/semantic.min.css
+.tup/
