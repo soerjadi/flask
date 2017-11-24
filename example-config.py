@@ -4,6 +4,9 @@ import os
 # Statement for enabling the development environment
 DEBUG = True
 
+# Define application mode. Value only "production" or "development"
+MODE = ""
+
 # Server name for url generation. If port not filed so use the default 5000
 SERVER_NAME = "127.0.0.1"
 
