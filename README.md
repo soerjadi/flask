@@ -1,5 +1,5 @@
 # Python Flask example
-this just sample project for learning flask
+this just sample project for learning web with flask
 
 How to
 ------
